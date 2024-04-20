@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: 'Roboto',sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+:root{
+    --main-color:#d3ad7f;
+    --second-bg:#13131a;
+    --bg-color:#010103;
+    --border: .1rem solid rgba(255,255,255,.3)
+}
+html{
+    font-size: 70%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+html::-webkit-scrollbar{
+    width: .7rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+body{
+    background: var(--bg-color);
+
+}
+section{
+    padding: 2rem 7%;
+}
+.heading{
+    text-align: center;
+    color: #fff;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+.btn{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+
+}
+.btn:hover{
+    letter-spacing: .1rem;
+}
+.header{
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+    position: fixed;
+    border-bottom: var(--border);
+    z-index: 100;
+    top: 0; right: 0; left: 0;
+}
+.header .logo img{
+    height: 6rem;
+}
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+.header .icon div{
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    font-size: 2rem;
+}
+.header .icon div:hover{
+    color: var(--main-color);
+}
+#menu-btn{
+    display: none;
+}
+.header .search-form{
+    position:absolute;
+    top: 115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--second-bg);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .cart-item-container{
+    position: absolute;
+    top: 100%; right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 30rem;
+    background: #fff;
+    padding: 0 1.5rem;
+}
+
+.header .cart-item-container.active{
+    right: 0%;
+}
+
+.header .cart-item-container .cart-item{
+    display: flex;
+    position: relative;
+    margin: 1rem 0;
+    align-items: center;
+    gap: 1.5rem;
+}
+header .cart-item-container .cart-item .fa-times{
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 2rem;
+    color: var(--second-bg);
+
+}
+header .cart-item-container .cart-item .fa-times:hover{
+    color: var(--main-color);
+}
+header .cart-item-container .cart-item img{
+    height: 7rem;
+}
+header .cart-item-container .cart-item .content h3{
+    font-size: 2rem;
+    color: var(--second-bg);
+    padding-bottom: .5rem;
+}
+.header .cart-item-container .cart-item .content .price{
+    font-size: 2rem;
+    color:var(--second-bg);
+    padding-bottom: .5rem;
+}
+.header .cart-item-container .btn{
+    width: 100%;
+    text-align: center;
+}
+.home-sec{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../Coffee-Project/images/Coffee-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home-sec .home-content{
+    max-width: 60rem;
+    padding-top: 4rem;
+}
+.home-sec .home-content h3{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 3rem;
+}
+.home-sec .home-content p{
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: #fff;
+    padding: 1rem 0;
+    margin-top: 20px;
+    line-height: 2rem;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    background: var(--second-bg);
+    flex-wrap: wrap;
+}
+.about .row .image{
+    flex: 1 1 40rem;
+}
+.about .row .image img{
+    width: 100%;
+}
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+}
+.about .row .content p{
+    font-size: 2.5rem;
+    color:#ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+.about .row .content a{
+    background-color: #d3ad7f;
+    color: #ccc;
+
+}
+menu{
+    margin: 4rem;
+}
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+.menu .box-container .box{
+    text-align: center;
+    padding: 4.5rem;
+    border: var(--border);
+}
+.menu .box-container .box img{
+    height: 10rem;
+}
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    background: transparent;
+}
+.menu .box-container .box .price{
+    color: #ccc;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    background: transparent;
+}
+.menu .box-container .box .price span{
+    color: var(--main-color);
+    font-size: 1rem;
+    background: transparent;
+    padding: .5rem 0;
+    margin-left: .5rem;
+    text-decoration: line-through;
+}
+
+.product .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+.product .box-container .box{
+    border: var(--border);
+    text-align: center;
+    padding: 1.5rem;
+}
+.product .box-container .box .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border: var(--border);
+    font-size: 2rem;
+    color: #ccc;
+    margin: .3rem;
+}
+.product .box-container .box .icons a:hover{
+    background: var(--main-color);
+}
+.product .box-container .box .image{
+    padding: 2.5rem 0;
+}
+.product .box-container .box .image img{
+    height: 20rem;
+    width: 20rem;
+} 
+.product .box-container .box .content h3{
+    color: #fff;
+    font-size: 2.5rem;
+}
+.product .box-container .box .content .stars{
+    padding: 1.5rem;
+}
+.product .box-container .box .content .stars i{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.product .box-container .box .content .price{
+    color: #ccc;
+    font-size: 2rem;
+}
+.product .box-container .box .content .price span{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+.product .box-container .btn{
+    background-color: var(--main-color);
+    color: #ccc;
+    font-weight: 400;
+}
+.review .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+.review .container .box{
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+.review .container .quote{
+    height: 50px;
+    width: 50px;
+}
+
+.review .container .user{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review .container p {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 1.5rem 0rem;
+    color: #ccc;
+}
+.review .container .box h4{
+    font-size: 2rem;
+    padding: 1rem 0rem;
+    color: #fff;
+}
+.review .container .box .stars{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.contact .heading{
+    font-size: 3rem;
+}
+.contact .content p{
+    font-size: 1.5rem;
+    color: #ccc;
+}
+.blog .heading{
+    font-size: 3rem;
+}
+.blog .content p{
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media(max-width:991px){
+    html{
+    font-size: 64%;
+    }
+    .header{
+    padding: 1.5rem 2rem;   
+    }
+    
+    section{
+        padding: 2rem ;
+    }
+}
+
+@media(max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%; right:-100%;
+        background: #fff;
+        height: calc(100vh - 9.5rem);
+    }
+    .header .navbar.active{
+        right: 0%;
+
+    }
+    .header .navbar a{
+        color: var(--second-bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 8px;
+        font-size: 2rem;
+
+
+    }
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3{
+        font-size: 4rem;
+
+    }
+    .home .content p{
+        font-size: 2rem;
+    }    
+}
+@media(max-width:450px){
+    html{
+    font-size: 64%;
+    }
+    .header{
+    padding: 1.5rem 2rem;   
+    }
+}
