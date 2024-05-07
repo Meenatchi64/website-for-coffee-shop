@@ -394,28 +394,34 @@ menu{
     font-size: 1rem;
     font-weight: 300;
 }
-.contact .comment-container h2{
-    color: #d3ad7f;
-}
-.contactImage{
-    height: 300px;
-    width: 300px;
-}
-.contact .contact-feeds-container{
-    margin-top: 4rem;
-    display: flex;
-    gap: 2rem;
-}
-.comment-container{
-    width: 50%;
-    background: transparent;
-    border: #ccc 1px solid;
-    border-radius: 20px;
+.contactHeading2{
+    font-size: 2rem;
+    color: #ccc;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
-    padding: 10px 0;
+
 }
-
-
+.contactHeading2 span{
+    color: var(--main-color);
+}
+.contactBranches{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.contactBranches span{
+    color: var(--main-color);
+    font-weight: 900;
+}
+.mapContainer{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.embed-map{
+    height: 250px;
+    width: 500px;
+}    
 
 
 
