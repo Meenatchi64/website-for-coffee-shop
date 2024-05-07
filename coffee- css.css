@@ -360,7 +360,67 @@ menu{
 .contact .content p{
     font-size: 1.5rem;
     color: #ccc;
+    text-align: center;
 }
+.contact .contact-boxes-container{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.contact .contact-boxes-container .contact-box{
+    height: 200px;
+    width: 250px;
+    background-color: transparent;
+    padding: 10px;
+    border: #ccc 1px solid;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+.contact .contactIcons{
+    font-size: 3.5rem;
+    margin: 1.5rem 0;
+    color: var(--main-color);
+}
+.contact .contact-box h1{
+    color: #ccc;
+    margin-bottom: 10px;
+}
+.contact .contact-box span{
+    color: var(--main-color);
+}
+.contact .contact-box p{
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.contact .comment-container h2{
+    color: #d3ad7f;
+}
+.contactImage{
+    height: 300px;
+    width: 300px;
+}
+.contact .contact-feeds-container{
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+.comment-container{
+    width: 50%;
+    background: transparent;
+    border: #ccc 1px solid;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
+
+
+
 .blog .heading{
     font-size: 3rem;
 }
