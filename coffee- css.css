@@ -37,6 +37,7 @@ body{
 section{
     padding: 2rem 7%;
 }
+
 .heading{
     text-align: center;
     color: #fff;
@@ -365,7 +366,7 @@ menu{
 .contact .contact-boxes-container{
     margin-top: 4rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .contact .contact-boxes-container .contact-box{
     height: 200px;
@@ -392,7 +393,7 @@ menu{
 .contact .contact-box p{
     padding: 5px;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 600;
 }
 .contactHeading2{
     font-size: 2rem;
@@ -415,11 +416,12 @@ menu{
 }
 .mapContainer{
     justify-content: center;
+    display: flex;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 .embed-map{
-    height: 250px;
+    height: 350px;
     width: 500px;
 }    
 
