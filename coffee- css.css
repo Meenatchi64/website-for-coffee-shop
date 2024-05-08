@@ -88,10 +88,17 @@ section {
 .header .logo img {
     height: 6rem;
 }
+.header .logo img:hover{
+    cursor: default;
+}
 .header .navbar a {
     margin: 0 1rem;
     font-size: 1.5rem;
     color: #fff;
+}
+.header .navbar a:active,
+.header .navbar a:focus {
+    color: #d3ad7f;
 }
 .header .navbar a:hover {
     color: var(--main-color);
@@ -240,16 +247,17 @@ header .cart-item-container .cart-item .content h3 {
 /*Menu section*/
 .menu .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
 }
 .menu .box-container .box {
     text-align: center;
-    padding: 4.5rem;
+    padding: 2rem;
     border: var(--border);
 }
 .menu .box-container .box img {
     height: 10rem;
+    width: 15rem;
 }
 .menu .box-container .box h3 {
     color: #fff;
@@ -446,7 +454,7 @@ header .cart-item-container .cart-item .content h3 {
 }
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
     padding: 0 15px;
 }
 .blog-posts {
@@ -476,19 +484,51 @@ header .cart-item-container .cart-item .content h3 {
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
-.read-more-btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    font-size: 1.4rem;
-    background-color: var(--main-color);
+/* Footer Section*/
+footer {
+    background-color: var(--bg-color);
     color: #fff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-content {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.footer-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+}
+.footer-content p {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+.social-links {
+    list-style-type: none;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+.social-links li {
+    display: inline;
+    margin-right: 1rem;
+}
+.social-links li:last-child {
+    margin-right: 0;
+}
+.social-links a {
+    color: #ccc;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
-.read-more-btn:hover {
-    background-color: darken(var(--main-color), 10%);
+.social-links a:hover {
+    color: var(--main-color); 
 }
+
+
 
 /* Media queries */
 @media (max-width: 991px) {
